@@ -1,0 +1,67 @@
+@theme {
+  --typography-design-width: 1728;
+
+  /* Font sizes – mobile */
+  --fz-xs-mobile: 8;
+  --fz-sm-mobile: 10;
+  --fz-base-mobile: 14;
+  --fz-md-mobile: 22;
+  --fz-lg-mobile: 32;
+  --fz-xl-mobile: 64;
+  --fz-2xl-mobile: 64;
+
+  /* Font sizes – desktop (Figma where defined) */
+  --fz-xs-desktop: 14;
+  --fz-sm-desktop: 10;
+  --fz-base-desktop: 14;
+  --fz-md-desktop: 28; /* from Figma */
+  --fz-lg-desktop: 56; /* from Figma */
+  --fz-xl-desktop: 120;
+  --fz-2xl-desktop: 180;
+
+  --text-xs: clamp(
+    calc(var(--fz-xs-mobile) * 1px),
+    calc((var(--fz-xs-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-xs-desktop) * 1.5 * 1px)
+  );
+
+  --text-sm: clamp(
+    calc(var(--fz-sm-mobile) * 1px),
+    calc((var(--fz-sm-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-sm-desktop) * 1.5 * 1px)
+  );
+
+  --text-base: clamp(
+    calc(var(--fz-base-mobile) * 1px),
+    calc((var(--fz-base-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-base-desktop) * 1.5 * 1px)
+  );
+
+  --text-md: clamp(
+    calc(var(--fz-md-mobile) * 1px),
+    calc((var(--fz-md-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-md-desktop) * 1.5 * 1px)
+  );
+
+  --text-lg: clamp(
+    calc(var(--fz-lg-mobile) * 1px),
+    calc((var(--fz-lg-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-lg-desktop) * 1.5 * 1px)
+  );
+
+  --text-xl: clamp(
+    calc(var(--fz-xl-mobile) * 1px),
+    calc((var(--fz-xl-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-xl-desktop) * 1.5 * 1px)
+  );
+
+  --text-2xl: clamp(
+    calc(var(--fz-2xl-mobile) * 1px),
+    calc((var(--fz-2xl-desktop) / var(--typography-design-width)) * 100vw),
+    calc(var(--fz-2xl-desktop) * 1.5 * 1px)
+  );
+}
+
+.font-title {
+  line-height: 1.1;
+}

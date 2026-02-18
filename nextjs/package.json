@@ -1,0 +1,39 @@
+{
+  "name": "nextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@datocms/cda-client": "^0.2.10",
+    "@gsap/react": "^2.1.2",
+    "classnames": "^2.5.1",
+    "fast-xml-parser": "^5.3.3",
+    "framer-motion": "^12.34.2",
+    "gsap": "^3.14.2",
+    "html-react-parser": "^5.2.17",
+    "next": "16.1.1",
+    "qs": "^6.14.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.27",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "prettier": "3.7.4",
+    "prettier-eslint": "16.4.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

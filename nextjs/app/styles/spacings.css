@@ -1,0 +1,90 @@
+:root {
+  --gutter-mobile: 8;
+  --margin-mobile: 8;
+
+  --3xs-mobile: 4;
+  --2xs-mobile: 8;
+  --xs-mobile: 12;
+  --sm-mobile: 16;
+  --md-mobile: 24;
+  --lg-mobile: 40;
+  --xl-mobile: 56;
+  --2xl-mobile: 72;
+
+  --gutter-desktop: 8;
+  --margin-desktop: 16;
+
+  --3xs-desktop: 4;
+  --2xs-desktop: 8;
+  --xs-desktop: 16;
+  --sm-desktop: 24;
+  --md-desktop: 32;
+  --lg-desktop: 56;
+  --xl-desktop: 80;
+  --2xl-desktop: 96;
+}
+
+@theme {
+  --spacing-design-width: 1488;
+
+  --spacing-xs-mobile: calc(var(--xs-mobile) * 1px);
+  --spacing-sm-mobile: calc(var(--sm-mobile) * 1px);
+  --spacing-md-mobile: calc(var(--md-mobile) * 1px);
+  --spacing-lg-mobile: calc(var(--lg-mobile) * 1px);
+  --spacing-xl-mobile: calc(var(--xl-mobile) * 1px);
+  --spacing-2xl-mobile: calc(var(--2xl-mobile) * 1px);
+  --spacing-gutter-mobile: calc(var(--gutter-mobile) * 1px);
+  --spacing-margin-mobile: calc(var(--margin-mobile) * 1px);
+
+  --spacing-xs-desktop: calc(var(--xs-desktop) * 1px);
+  --spacing-sm-desktop: calc(var(--sm-desktop) * 1px);
+  --spacing-md-desktop: calc(var(--md-desktop) * 1px);
+  --spacing-lg-desktop: calc(var(--lg-desktop) * 1px);
+  --spacing-xl-desktop: calc(var(--xl-desktop) * 1px);
+  --spacing-2xl-desktop: calc(var(--2xl-desktop) * 1px);
+  --spacing-gutter-desktop: calc(var(--gutter-desktop) * 1px);
+  --spacing-margin-desktop: calc(var(--margin-desktop) * 1px);
+
+  --spacing-xs: clamp(
+    var(--spacing-xs-mobile),
+    calc((var(--xs-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-xs-desktop)
+  );
+  --spacing-sm: clamp(
+    var(--spacing-sm-mobile),
+    calc((var(--sm-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-sm-desktop)
+  );
+  --spacing-md: clamp(
+    var(--spacing-md-mobile),
+    calc((var(--md-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-md-desktop)
+  );
+  --spacing-lg: clamp(
+    var(--spacing-lg-mobile),
+    calc((var(--lg-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-lg-desktop)
+  );
+  --spacing-xl: clamp(
+    var(--spacing-xl-mobile),
+    calc((var(--xl-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-xl-desktop)
+  );
+  --spacing-2xl: clamp(
+    var(--spacing-2xl-mobile),
+    calc((var(--2xl-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-2xl-desktop)
+  );
+
+  --spacing-gutter: clamp(
+    var(--spacing-gutter-mobile),
+    calc((var(--gutter-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-gutter-desktop)
+  );
+
+  --spacing-margin: clamp(
+    var(--spacing-margin-mobile),
+    calc((var(--margin-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-margin-desktop)
+  );
+}
