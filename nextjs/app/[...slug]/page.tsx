@@ -1,4 +1,5 @@
 import { api } from "@/src/api/datoApi";
+import PageWrapper from "@/src/components/PageWrapper";
 import { blockDefinitions } from "@/src/compositions/blocks";
 import DynamicZone from "@/src/compositions/DynamicZone";
 import Image from "next/image";
@@ -19,9 +20,9 @@ export default async function Page({ params }: PageProps) {
   console.log("page", page);
 
   return (
-    <main>
+    <PageWrapper>
       <DynamicZone {...page} />
-    </main>
+    </PageWrapper>
   );
 }
 

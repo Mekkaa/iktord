@@ -43,8 +43,20 @@ const GET_NAVIGATION = `
   }
 `;
 
+const GET_SETTINGS = `
+  query($locale:SiteLocale) {
+      settingsModel(locale:$locale) {
+        address
+        tele
+        email
+      }
+
+  }
+`;
+
 export const Queries = {
   getPage: GET_PAGE,
   getSlugs: GET_SLUGS,
+  getSettings: GET_SETTINGS,
   getNavigation: GET_NAVIGATION,
 };

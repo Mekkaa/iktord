@@ -5,6 +5,8 @@ import {
   DatoNavigationResponseType,
   DatoPageResponseType,
   DatoPageType,
+  DatoSettingsProps,
+  DatoSettingssResponseType,
   DatoSlugsResponseType,
 } from "../types/dato";
 import { Queries } from "../graphql/queries";
@@ -88,12 +90,20 @@ const getPageSlugs = async (
   return data?.allPages;
 };
 
+const getSettings = async (locale: string): Promise<DatoSettingsProps> => {
+  const data = (await getCMSData(
+    Queries.getSettings
+  )) as DatoSettingssResponseType;
+
+  return data?.settingsModel;
+};
+
 const getNavigation = async (locale: string): Promise<NavTreeNode[]> => {
   const data = (await getCMSData(Queries.getNavigation, {
     locale: locale || "sv",
   })) as DatoNavigationResponseType;
 
-  const nav = buildNavTreeFromParents(data.allPages);
+  const nav = [] as any; //buildNavTreeFromParents(data.allPages);
 
   return nav;
 };
@@ -103,6 +113,7 @@ export const api = {
     page: getPage,
     news: getNews,
     slugs: getPageSlugs,
+    settings: getSettings,
     navigation: getNavigation,
   },
 };

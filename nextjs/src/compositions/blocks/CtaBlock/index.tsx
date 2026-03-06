@@ -21,7 +21,7 @@ const CtaBlock: FC<CtaBlockType> = ({ title, text, links, ...props }) => {
       width="contain"
       className="grid grid-cols-6 md:grid-cols-12 gap-gutter py-lg"
     >
-      <div className="col-span-6 md:col-span-3">
+      <div className="col-span-6 md:col-span-5">
         <AnimatedText
           as="h3"
           duration={0.52}

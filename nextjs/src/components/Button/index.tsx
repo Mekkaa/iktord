@@ -9,6 +9,7 @@ type ButtonType = {
   href?: string;
   className?: string;
   variant?: Variant;
+  submit?: boolean;
   children: ReactNode;
 };
 
@@ -42,6 +43,7 @@ const Button: FC<ButtonType> = ({
   className,
   variant = "primary",
   children,
+  submit,
   href,
   onClick,
 }) => {
@@ -60,7 +62,11 @@ const Button: FC<ButtonType> = ({
   }
 
   return (
-    <button type="submit" className={classes} onClick={onClick}>
+    <button
+      type={submit ? "submit" : "button"}
+      className={classes}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

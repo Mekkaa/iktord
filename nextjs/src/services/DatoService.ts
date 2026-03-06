@@ -1,6 +1,4 @@
-import { LinkProps } from "next/link";
-import { DatoLinkProps, DatoNavigationProps } from "../types/dato";
-import { title } from "process";
+import { DatoLinkProps } from "../types/dato";
 
 export const getParentSlugsFlat = (link: DatoLinkProps): string[] => {
   const slugs: string[] = [];

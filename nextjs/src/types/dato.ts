@@ -18,19 +18,29 @@ export type DatoSlugsResponseType = {
   allPages: { slug: string; _locales: string[] }[];
 };
 
+export type DatoSettingssResponseType = {
+  settingsModel: DatoSettingsProps;
+};
+
 export type DatoNavigationProps = {
   slug: string;
   title: string;
   position: string;
   children?: DatoNavigationProps[];
-  parent?: DatoNavigationProps[];
+  parent?: DatoNavigationProps;
 };
 
 export type DatoLinkProps = {
   title: string;
   slug: string;
   id: string;
-  parent?: DatoNavigationProps[];
+  parent?: DatoNavigationProps;
+};
+
+export type DatoSettingsProps = {
+  address?: string;
+  tele?: string;
+  email?: string;
 };
 
 export type DatoNavigationResponseType = {

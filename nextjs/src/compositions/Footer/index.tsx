@@ -4,12 +4,14 @@ import BlockWrapper from "../BlockWrapper";
 import Link from "next/link";
 import { JustifyText } from "@/src/components/JustifyText";
 import classNames from "classnames";
+import { DatoSettingsProps } from "@/src/types/dato";
 
 type FooterType = {
   className?: string;
+  settings?: DatoSettingsProps;
 };
 
-const Footer: FC<FooterType> = (props) => {
+const Footer: FC<FooterType> = ({ className, settings }) => {
   const flexClasses = "flex items-center justify-center";
   const boxClasses = "p-12 w-full text-white";
   return (
@@ -24,6 +26,11 @@ const Footer: FC<FooterType> = (props) => {
           nulla maiores tempore ipsam ut eum itaque non, earum, facere
           molestias?
         </p>
+        <div className="flex flex-col gap-1 py-sm">
+          <Link href={""}>{settings?.tele}</Link>
+          <Link href={""}>{settings?.email}</Link>
+          <Link href={""}>{settings?.address}</Link>
+        </div>
         <div className="flex gap-sm">
           <Link href={""}>Link</Link>
         </div>
@@ -31,9 +38,14 @@ const Footer: FC<FooterType> = (props) => {
 
       <div className="col-span-6 py-xl md:col-span-10 md:col-start-2 border-t-12 border-white flex justify-center">
         <div className="w-full uppercase font-title text-white">
-          <JustifyText>En gång lila alltid lila </JustifyText>
+          <JustifyText>En gång lila alltid lila</JustifyText>
         </div>
       </div>
+      {/* <div className="flex gap-xs pb-sm col-span-6 md:col-span-6 md:col-start-2">
+        <Link href={""}>{settings?.tele}</Link>
+        <Link href={""}>{settings?.email}</Link>
+        <Link href={""}>{settings?.address}</Link>
+      </div> */}
 
       {/* <div className="col-span-12 grid grid-cols-12">
         <div className="col-span-8">

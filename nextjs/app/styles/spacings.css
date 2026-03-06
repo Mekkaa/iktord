@@ -3,7 +3,7 @@
   --margin-mobile: 8;
 
   --3xs-mobile: 4;
-  --2xs-mobile: 8;
+  --2xs-mobile: 4;
   --xs-mobile: 12;
   --sm-mobile: 16;
   --md-mobile: 24;
@@ -15,7 +15,7 @@
   --margin-desktop: 16;
 
   --3xs-desktop: 4;
-  --2xs-desktop: 8;
+  --2xs-desktop: 6;
   --xs-desktop: 16;
   --sm-desktop: 24;
   --md-desktop: 32;
@@ -27,6 +27,7 @@
 @theme {
   --spacing-design-width: 1488;
 
+  --spacing-2xs-mobile: calc(var(--2xs-mobile) * 1px);
   --spacing-xs-mobile: calc(var(--xs-mobile) * 1px);
   --spacing-sm-mobile: calc(var(--sm-mobile) * 1px);
   --spacing-md-mobile: calc(var(--md-mobile) * 1px);
@@ -45,6 +46,11 @@
   --spacing-gutter-desktop: calc(var(--gutter-desktop) * 1px);
   --spacing-margin-desktop: calc(var(--margin-desktop) * 1px);
 
+  --spacing-2xs: clamp(
+    var(--spacing-xs-mobile),
+    calc((var(--xs-desktop) / var(--spacing-design-width)) * 100vw),
+    var(--spacing-xs-desktop)
+  );
   --spacing-xs: clamp(
     var(--spacing-xs-mobile),
     calc((var(--xs-desktop) / var(--spacing-design-width)) * 100vw),

@@ -6,6 +6,7 @@ import UI from "@/src/compositions/UI";
 import News from "@/src/compositions/News";
 import Footer from "@/src/compositions/Footer";
 import { api } from "@/src/api/datoApi";
+import ReduxProvider from "@/src/redux/ReduxProvider";
 
 const bebas_neue = Bebas_Neue({
   variable: "--font-bebas_neue",
@@ -24,17 +25,21 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const navigation = await api.get.navigation("sv");
+  const settings = await api.get.settings("sv");
   console.log("nav", navigation);
+  console.log("settings", settings);
 
   return (
-    <html lang="en">
-      <body className={`${bebas_neue.variable}  antialiased`}>
-        <Header />
+    <ReduxProvider>
+      <html lang="en">
+        <body className={`${bebas_neue.variable}  antialiased`}>
+          <Header />
 
-        {children}
+          {children}
 
-        <Footer />
-      </body>
-    </html>
+          <Footer settings={settings} />
+        </body>
+      </html>
+    </ReduxProvider>
   );
 }
