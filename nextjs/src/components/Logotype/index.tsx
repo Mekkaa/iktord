@@ -4,7 +4,7 @@ import { FC } from "react";
 import imgSrc from "../../../public/IK-Tord-vit-ram.png";
 import classNames from "classnames";
 
-type Sizes = "large" | "small";
+type Sizes = "large" | "medium" | "small";
 
 type LogotypeType = {
   className?: string;
@@ -17,6 +17,11 @@ const getImgSize = (size: Sizes): { width: number; height: number } => {
       return {
         width: 300,
         height: 100,
+      };
+    case "medium":
+      return {
+        width: 150,
+        height: 75,
       };
     default:
       return {

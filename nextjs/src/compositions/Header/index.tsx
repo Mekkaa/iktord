@@ -34,7 +34,7 @@ const Header: FC<HeaderType> = (props) => {
         </Button>
 
         <motion.div
-          className="absolute w-[500px] border-t-2 -bottom-gutter right-0 text-white translate-y-full z-30 p-md bg-inherit"
+          className="absolute w-screen md:w-[500px] border-t-2 -bottom-gutter right-0 text-white translate-y-full z-30 p-md bg-inherit"
           initial={false}
           animate={menuIsOpen ? "open" : "closed"}
           variants={{
